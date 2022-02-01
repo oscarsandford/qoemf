@@ -1,6 +1,6 @@
 ---
 theme: jekyll-theme-cayman
-layout: page
+layout: default
 title: "Log Book"
 permalink: /log/
 ---
