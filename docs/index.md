@@ -14,6 +14,8 @@ connecting to the network.
 More details forthcoming.
 
 
+* * *
+
 # Log Book
 
 Over time, we will document our progress on the project here.
@@ -29,4 +31,24 @@ Phasellus in urna in massa vehicula tempus. Etiam egestas fermentum lectus, quis
 ### Event 3 - 2112-04-11
 
 Duis vitae urna ut felis luctus gravida. Sed aliquam, nisl vel aliquet euismod, erat magna bibendum justo, ac tincidunt elit purus ut sapien. Donec euismod odio magna, quis hendrerit dui hendrerit eget. Proin dapibus mi vel ligula lacinia, a euismod tellus tincidunt. Suspendisse vitae volutpat ligula. Duis placerat vestibulum mi auctor varius. Nullam eget bibendum purus, sed consectetur augue. Pellentesque ut ex vel lorem vestibulum maximus. Maecenas bibendum libero augue, tempor feugiat tellus tristique sit amet.
+
+
+# Midterm Presentation
+
+Embed a video here?
+
+# Final Presentation
+
+Embed a video here?
+
+
+# Report 
+
+Embed PDF here. Just a test.
+
+<object data="../report/report.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="../report/report.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../report/report.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
