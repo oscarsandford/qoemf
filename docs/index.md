@@ -3,125 +3,30 @@ layout: default
 title: "qoemf"
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Project Proposal
 
-[Link to another page](./another-page.html).
+We propose designing and demonstrating a framework for measuring QoE (quality of experience) for clients connecting to a server over a virtual 
+network using [mininet](http://mininet.org/). Alterations on the server-side (e.g. flow control policy, packet drop rates) will be used to simulate 
+load or unstable connection. On the client-side, we can recreate DoS and other attacks on the server in a controlled and natural way in order to 
+see how the server responds. Our primary objective will be to understand how these various factors influence the quality of experience for clients 
+connecting to the network. 
 
-Proposal is found [here](./proposal.md).
-Log book is found [here](./log.md).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+More details forthcoming.
 
 
-### Definition lists can be used with HTML syntax.
+# Log Book
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+Over time, we will document our progress on the project here.
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+### Event 1 - 2112-03-04
 
-```
-The final element.
-```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis lacus malesuada, sagittis dui et, mollis eros. Nam nec lacus in neque facilisis condimentum. Aliquam erat volutpat. Suspendisse imperdiet, nunc eget molestie semper, tortor ex dictum dolor, vitae rutrum urna purus eleifend sapien. Vivamus maximus, quam et feugiat sodales, tellus lectus sagittis lacus, eu ultrices sapien urna quis nibh. Nulla ac sapien ac purus mattis aliquet. Nam placerat id risus at porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vitae dictum metus.
+
+### Event 2 - 2112-03-17
+
+Phasellus in urna in massa vehicula tempus. Etiam egestas fermentum lectus, quis laoreet magna tempus a. Donec ut ante iaculis, vestibulum dolor a, auctor ex. Pellentesque vitae nulla massa. Cras metus ex, laoreet sed molestie in, egestas ut sem. Curabitur tempus magna ligula, a volutpat enim laoreet id. Praesent tincidunt ultricies lectus, in scelerisque libero sollicitudin eget. Morbi sit amet sollicitudin sapien. Ut velit augue, convallis ac condimentum lobortis, ullamcorper sed massa. Vestibulum quis ligula mauris. Suspendisse id cursus nisi. Sed dignissim nisl iaculis lectus finibus, et mattis urna consequat. Phasellus sed lacus neque. In at arcu arcu. Integer at ornare lectus, non ornare urna. Nam sodales arcu a mi vulputate viverra.
+
+### Event 3 - 2112-04-11
+
+Duis vitae urna ut felis luctus gravida. Sed aliquam, nisl vel aliquet euismod, erat magna bibendum justo, ac tincidunt elit purus ut sapien. Donec euismod odio magna, quis hendrerit dui hendrerit eget. Proin dapibus mi vel ligula lacinia, a euismod tellus tincidunt. Suspendisse vitae volutpat ligula. Duis placerat vestibulum mi auctor varius. Nullam eget bibendum purus, sed consectetur augue. Pellentesque ut ex vel lorem vestibulum maximus. Maecenas bibendum libero augue, tempor feugiat tellus tristique sit amet.
+
