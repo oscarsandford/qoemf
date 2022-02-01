@@ -1,10 +1,14 @@
 ---
 layout: default
+title: "qoemf"
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
+
+Proposal is found [here](./proposal.md).
+Log book is found [here](./log.md).
 
 There should be whitespace between paragraphs.
 
