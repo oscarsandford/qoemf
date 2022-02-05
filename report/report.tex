@@ -11,9 +11,9 @@
 \def\L{{\cal L}}
 
 
-\title{A Simple Load Testing QoE Measurement Framework}
+\title{A Simple Load Testing QoS Measurement Framework}
 \name{Juan Flores, Oscar Sandford, and Ben Wunderlich
-\thanks{Thanks to Dr. Jianping Pan at the University of Victoria for his teaching and guidance throughout this project and the course.}}
+\thanks{Thank you to Dr. Jianping Pan at the University of Victoria for his teaching and guidance throughout this project and the course.}}
 \address{University of Victoria}
 \begin{document}
 %
@@ -24,20 +24,42 @@ Write this last.
 \end{abstract}
 %
 \begin{keywords}
-One, two, three, four, five
+Quality of Service, Software Defined Network, Network emulation, Mininet
 \end{keywords}
 %
+% Overview of the problem. Why is it important?
 \section{Introduction}
-Overview of the problem. Why is it important?
+The design of computer networks is driven by a drive towards a target quality of service (QoS), a set of performance measurements. Further, the implementation of 
+network architectures demands time and money, and implementations that fail to meet quality of service standards waste time for both companies and customers. 
+Software-defined networks (SDN) addresses the project of static architectures by enabling programming and measurement in a dynamic setting. It is important to understand 
+and harness the strengths of SDN in a methodical way, so developers can focus more on the design goals and less on tedious implementation tasks.
 
+% What has already been done? Why are their efforts not sufficient?
 \section{Related Work}
-What has already been done? Why are their efforts not sufficient? Here's a citation \cite{Lamp86}.
+Text here.
 
+% What is our approach? Why can it do better or differently?
 \section{Approach}
-What is our approach? Why can it do better or differently?
+Mininet will be utilized as a network emulator, for it has seen significant use in related works \cite{mininet_emulation_2014,qos_analysis_2022,chauhan_atulkar_2020} and 
+is well-documented. The Iperf tool was used in \cite{chauhan_atulkar_2020} for generating network traffic, and we think that this tool will be appropriate for the same 
+purposes in this study. We will reuse the quality of service metrics outlined in \cite{qos_analysis_2022}: 
+\begin{itemize}
+    \item Throughput (total transmitted data in bits)/(total time taken in seconds)
+    \item Delay (time required to transmit the data from sender to receiver)
+    \item Packet loss (the number of packets not delivered to their destination)
+    \item Jitter (the variance in latency)
+\end{itemize} 
+Previous studies have defined quality of services measurements and used network emulation tools to program their own experiments. However, there does not seem to be a 
+general method through which network emulation tools can be used, in association with quality of service measurement techniques, in order to test network architectures 
+for their performance before they are implemented in real-world applications. \\\\
+We will use Mininet's toolkit create a server around a given application (i.e. a simple Node.js application), and artificially adjust flow control, packet drop rate, 
+and jitter from the server-side. Mininet will be able to measure packet return trip time (RTT), delay, and throughput from the server to clients, and the results of 
+these measurements will determine how the overall quality of service changes as various server-side features are tweaked dynamically. Further, we will show how to use 
+Mininet to simulate DoS attacks by a large number of clients in order to observe how attacks affect quality of service to benign users. 
 
+% Expected deliverables and a rough biweekly time schedule.
 \subsection{Timeline}
-Expected deliverables and a rough biweekly time schedule.
+Text here.
 
 \subsection{Project Website}
 Please see the associated website for progress reports and results at https://oscarsandford.github.io/qoemf/.

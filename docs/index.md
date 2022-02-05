@@ -5,7 +5,7 @@ title: "qoemf"
 
 # Project Proposal
 
-We propose designing and demonstrating a framework for measuring QoE (quality of experience) for clients connecting to a server over a virtual 
+We propose designing and demonstrating a framework for measuring QoS (quality of service) for clients connecting to a server over a virtual 
 network using [mininet](http://mininet.org/). Alterations on the server-side (e.g. flow control policy, packet drop rates) will be used to simulate 
 load or unstable connection. On the client-side, we can recreate DoS and other attacks on the server in a controlled and natural way in order to 
 see how the server responds. Our primary objective will be to understand how these various factors influence the quality of experience for clients 
@@ -45,10 +45,4 @@ Embed a video here?
 # Report 
 
 Embed PDF here. Just a test.
-
-<object data="../report/report.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="../report/report.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../report/report.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
+<iframe src="../report/report.pdf" width="100%" height="500px"></iframe>
