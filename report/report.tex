@@ -36,7 +36,9 @@ and harness the strengths of SDN in a methodical way, so developers can focus mo
 
 % What has already been done? Why are their efforts not sufficient?
 \section{Related Work}
-Text here.
+Previous studies have defined quality of services measurements \cite{qos_analysis_2022} and used network emulation tools to program their own experiments 
+\cite{chauhan_atulkar_2020}. However, there does not seem to be a general method through which network emulation tools can be used in association with quality 
+of service measurement techniques to test network architectures for their performance before they are implemented in real-world applications.
 
 % What is our approach? Why can it do better or differently?
 \section{Approach}
@@ -49,23 +51,23 @@ purposes in this study. We will reuse the quality of service metrics outlined in
     \item Packet loss (the number of packets not delivered to their destination)
     \item Jitter (the variance in latency)
 \end{itemize} 
-Previous studies have defined quality of services measurements and used network emulation tools to program their own experiments. However, there does not seem to be a 
-general method through which network emulation tools can be used, in association with quality of service measurement techniques, in order to test network architectures 
-for their performance before they are implemented in real-world applications. \\\\
 We will use Mininet's toolkit create a server around a given application (i.e. a simple Node.js application), and artificially adjust flow control, packet drop rate, 
 and jitter from the server-side. Mininet will be able to measure packet return trip time (RTT), delay, and throughput from the server to clients, and the results of 
 these measurements will determine how the overall quality of service changes as various server-side features are tweaked dynamically. Further, we will show how to use 
-Mininet to simulate DoS attacks by a large number of clients in order to observe how attacks affect quality of service to benign users. 
+Mininet to simulate DoS attacks by a large number of clients in order to observe how attacks affect quality of service to benign users. \\\\
+In this way, we will provide a quality of service measurement outline for future developers to consider when testing their network applications in a software-driven 
+manner. 
 
 % Expected deliverables and a rough biweekly time schedule.
 \subsection{Timeline}
-Jan 31st - Feb 13th: Create project outline, gather resources, outline program and create git repo
-Feb 14th - Feb 27th: Build testing environment and prepare test .
-Feb 28th - Mar 13th: Begin tests, create midterm presentation and present. 
-Mar 14th - Mar 27th: Gather results and prepare final presentation. Begin final report.
-Mar 28th - Apr 7th:  Final Presentation. Continueto work on final report
-Apr 8th  - Apr 16th: Turn in final report.  
-
+\begin{enumerate}
+    \item Jan 31st - Feb 13th: Create project outline, gather resources, outline program and create git repository.
+    \item Feb 14th - Feb 27th: Build testing environment and prepare test.
+    \item Feb 28th - Mar 13th: Begin tests, create midterm presentation and present. 
+    \item Mar 14th - Mar 27th: Gather results and prepare final presentation. Begin final report.
+    \item Mar 28th - Apr 7th: Final Presentation. Continue to work on final report.
+    \item Apr 8th - Apr 16th: Turn in final report.
+\end{enumerate}
 
 \subsection{Project Website}
 Please see the associated website for progress reports and results at https://oscarsandford.github.io/qoemf/.
