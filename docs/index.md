@@ -20,9 +20,12 @@ More details forthcoming.
 
 Over time, we will document our progress on the project here.
 
-### Event 1 - 2112-03-04
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis lacus malesuada, sagittis dui et, mollis eros. Nam nec lacus in neque facilisis condimentum. Aliquam erat volutpat. Suspendisse imperdiet, nunc eget molestie semper, tortor ex dictum dolor, vitae rutrum urna purus eleifend sapien. Vivamus maximus, quam et feugiat sodales, tellus lectus sagittis lacus, eu ultrices sapien urna quis nibh. Nulla ac sapien ac purus mattis aliquet. Nam placerat id risus at porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vitae dictum metus.
+### First bi-weekly Project Update (2/21/2022)
+
+As  of now, most of the  effort has gone to research. Each member has taken time to review papers that relate to our project. Along with this, we’ve reviewed documentation for Mininet and set up a testing environment with Mininet in VM (VirtualMachine). The code creates a simple network and tests when it goes live. A Github repository has been made containing the code and all we’ve written for the report so far.
+
+There are a few tasks that we are currently working on. One major task we are undertaking is researching and deciding on the metrics we’ll be using to run our tests. We are comparing metrics used in different papers to observe what can give us an accurate result. Another major task is working on the technical side of the project. Simply getting the code up and running for QoS tests that we’ll measure with our metrics.
 
 ### Event 2 - 2112-03-17
 
