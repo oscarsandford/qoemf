@@ -21,7 +21,7 @@ More details forthcoming.
 Over time, we will document our progress on the project here.
 
 
-### First bi-weekly Project Update (2/21/2022)
+### First Bi-weekly Project Update (2/21/2022)
 
 As  of now, most of the  effort has gone to research. Each member has taken time to review papers that relate to our project. Along with this, we’ve reviewed documentation for Mininet and set up a testing environment with Mininet in VM (VirtualMachine). The code creates a simple network and tests when it goes live. A Github repository has been made containing the code and all we’ve written for the report so far.
 
