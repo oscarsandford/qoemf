@@ -1,0 +1,15 @@
+{
+  "name": "qoemf-server",
+  "version": "1.0.0",
+  "description": "A simple node backend for testing QoS with Mininet.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JOB",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
