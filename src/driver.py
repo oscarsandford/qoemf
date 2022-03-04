@@ -43,14 +43,21 @@ def host_process_test(net, h: str):
 
 def host_node_test(net, h: str):
     host = net.get(h)
-    print(f"> Destroying existing node processes on {h}..")
+    client = net.get("h2")
+    print(f"> Destroying existing node processes on {h}.")
     host.cmd("killall -9 node")
 
-    print("> Running: node index.js "+str(host.IP()))
-    host.cmd("node index.js "+str(host.IP())+" > h.log &")
-    sleep(5)
+    print("> host running: node index.js "+host.IP()+" &")
+    res1 = host.cmd("node index.js "+host.IP()+" &")
+    sleep(1)
+    print(res1)
 
-    print("> Killing node.")
+    print("> client running: curl http://"+host.IP())
+    res = client.cmd("curl http://"+host.IP())
+    print("response:")
+    print(res)
+
+    print(f"> Killing node processes on {h}.")
     host.cmd("killall -9 node")
     print("> Done.")
 
