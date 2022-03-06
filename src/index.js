@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = 8080;
+const IP = (process.argv.length===3) ? process.argv[2] : "127.0.0.1";
 
-
-app.listen(PORT, () => {
-	console.log(`qoemf express server listening on port ${PORT}.`);
+app.listen(PORT, IP, () => {
+	console.log(` >> qoemf express server listening at ${IP}/${PORT}.`);
 });
 
 app.get("*", (req,res) => {
@@ -19,6 +19,6 @@ app.get("*", (req,res) => {
 //	res.end();
 //});
 //
-//server.listen(3000, () => {
-//	console.log("qoemf server: listening on http://localhost:3000");	
+//server.listen(PORT, IP, () => {
+//	console.log(` >> qoemf express server listening at ${IP}/${PORT}.`);
 //});
