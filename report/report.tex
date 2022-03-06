@@ -11,7 +11,7 @@
 \def\L{{\cal L}}
 
 
-\title{A Simple Load Testing QoS Measurement Framework}
+\title{On Using Mininet to Evaluate QoS for Node.js Back Ends}
 \name{Juan Flores, Oscar Sandford, and Ben Wunderlich
 \thanks{Thank you to Dr. Jianping Pan at the University of Victoria for his teaching and guidance throughout this project and the course.}}
 \address{University of Victoria}
@@ -24,7 +24,7 @@ Write this last.
 \end{abstract}
 %
 \begin{keywords}
-Quality of Service, Software Defined Network, Network emulation, Mininet
+Quality of Service, Software Defined Network, Network emulation, Mininet, Node.js
 \end{keywords}
 %
 % Overview of the problem. Why is it important?
@@ -32,31 +32,48 @@ Quality of Service, Software Defined Network, Network emulation, Mininet
 The design of computer networks is driven by a drive towards a target quality of service (QoS), a set of performance measurements. Further, the implementation of 
 network architectures demands time and money, and implementations that fail to meet quality of service standards waste time for both companies and customers. 
 Software-defined networks (SDN) addresses the project of static architectures by enabling programming and measurement in a dynamic setting. It is important to understand 
-and harness the strengths of SDN in a methodical way, so developers can focus more on the design goals and less on tedious implementation tasks.
+and harness the strengths of SDN in a methodical way, so developers can focus more on the design goals and less on tedious implementation tasks. 
+
+There does not yet exist a qualitative evaluation of such measurement techniques for modern web servers such as Node.js. Providing a survey of various QoS measurement 
+metrics for this domain will enable web developers to better understand and optimize the QoS metrics that matter most to their application domain.
 
 % What has already been done? Why are their efforts not sufficient?
 \section{Related Work}
 Previous studies have defined quality of services measurements \cite{qos_analysis_2022} and used network emulation tools to program their own experiments 
-\cite{chauhan_atulkar_2020}. However, there does not seem to be a general method through which network emulation tools can be used in association with quality 
-of service measurement techniques to test network architectures for their performance before they are implemented in real-world applications.
+\cite{chauhan_atulkar_2020}. The metrics presented in \cite{qos_analysis_2022} are throughput, delay, packet loss, and jitter. The authors used these metrics in a 
+generic setting (i.e. no specific domain) in order to compare TCP and UDP protocols. While this domain-agnostic approach makes for a good start, there are several 
+flaws in their results. Firstly, no packet loss was experienced, and therefore the measurement was ignored. Secondly, previous studies used round trip time (RTT) 
+as a QoS metric, which \cite{qos_analysis_2022} did not consider. 
+
+Another study that investigated load balancing algorithms looked at throughput, response time, and memory utilization \cite{babbar_2022}. Measuring memory utilization 
+is effective for load balancing, but we are considering quality of service, with the focus on the end user. The weight on the server only matters if it affects the 
+client. This paper enforces throughput as a necessary metric, and that response time (or RTT) must be considered. 
+
+Regencia and Yu's paper develops a completely configurable QoS testing framework \cite{regencia_2021}. Their framework allows for topology, switch, load, host, and 
+other such configuration, but this configurablility add unnecessary overhead to our specific problem. 
 
 % What is our approach? Why can it do better or differently?
 \section{Approach}
-Mininet will be utilized as a network emulator, for it has seen significant use in related works \cite{mininet_emulation_2014,qos_analysis_2022,chauhan_atulkar_2020} and 
-is well-documented. The Iperf tool was used in \cite{chauhan_atulkar_2020} for generating network traffic, and we think that this tool will be appropriate for the same 
-purposes in this study. We will reuse the quality of service metrics outlined in \cite{qos_analysis_2022}: 
+Mininet is utilized as a network emulator, for it has seen significant use in related works \cite{mininet_emulation_2014,qos_analysis_2022,chauhan_atulkar_2020} and 
+is well-documented. The Iperf tool was used in \cite{chauhan_atulkar_2020} for generating network traffic, and its use is considered for the same purposes in this 
+study. We reused the quality of service metrics outlined in \cite{qos_analysis_2022}: 
 \begin{itemize}
     \item Throughput (total transmitted data in bits)/(total time taken in seconds)
     \item Delay (time required to transmit the data from sender to receiver)
     \item Packet loss (the number of packets not delivered to their destination)
     \item Jitter (the variance in latency)
 \end{itemize} 
-We will use Mininet's toolkit create a server around a given application (i.e. a simple Node.js application), and artificially adjust flow control, packet drop rate, 
-and jitter from the server-side. Mininet will be able to measure packet return trip time (RTT), delay, and throughput from the server to clients, and the results of 
-these measurements will determine how the overall quality of service changes as various server-side features are tweaked dynamically. Further, we will show how to use 
-Mininet to simulate DoS attacks by a large number of clients in order to observe how attacks affect quality of service to benign users. \\\\
-In this way, we will provide a quality of service measurement outline for future developers to consider when testing their network applications in a software-driven 
-manner. 
+
+Mininet's toolkit is used to create a server around a simple Node.js application, and artificially adjust flow control, packet drop rate, and jitter from the server-side. 
+Mininet measures packet return trip time (RTT), delay, and throughput from the server to clients. The individual results of these measurements determine how the overall 
+quality of service changes as various server-side features are tweaked dynamically. Additionally, we show how to use Mininet to simulate DoS attacks by a large number 
+of clients in order to observe how attacks affect quality of service to benign users.
+
+The qualitative effects of the QoS metrics we used are analyzed to see which metrics are best for the domain of this problem. As a result of this study, we provide a 
+quality of service measurement outline for future developers to consider when testing their Node.js applications in a pseudo-live setting using Mininet. 
+
+Our project is extensible and configurable. All network simulation is done on Mininet's pre-built Ubuntu virtual machine image \cite{mininet_github_2021}, and our 
+source code for running Mininet in Python with a Node.js server is provided at the end of the work. 
 
 % Expected deliverables and a rough biweekly time schedule.
 \subsection{Timeline}
@@ -71,6 +88,18 @@ manner.
 
 \subsection{Project Website}
 Please see the associated website for progress reports and results at https://oscarsandford.github.io/qoemf/.
+
+% Some plots and stuff here about what we did.
+\section{Experiments}
+Text here.
+
+% Discussion about the results.
+\section{Discussion}
+Text here.
+
+% Wrap up and encourage further research in QoS.
+\section{Conclusion}
+Text here.
 
 % References should be produced using the bibtex program from suitable
 % BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
