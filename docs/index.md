@@ -49,7 +49,7 @@ Our next tasks will include finalizing the emulation code that will be used for 
 implementation of an emulation of a network and testing it using a framework. It is the hope that by increasing our knowledge of similar emulations it will inform our approach in our 
 project. 
 
-Indidual Contributions:
+Individual Contributions:
 
 Juan Flores
 - Wrote the project updates and updated the project website
