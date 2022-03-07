@@ -27,11 +27,28 @@ As  of now, most of the  effort has gone to research. Each member has taken time
 
 There are a few tasks that we are currently working on. One major task we are undertaking is researching and deciding on the metrics we’ll be using to run our tests. We are comparing metrics used in different papers to observe what can give us an accurate result. Another major task is working on the technical side of the project. Simply getting the code up and running for QoS tests that we’ll measure with our metrics.
 
-### Event 2 - 2112-03-17
+### First Bi-weekly Project Update (3/7/2022)
 
-Phasellus in urna in massa vehicula tempus. Etiam egestas fermentum lectus, quis laoreet magna tempus a. Donec ut ante iaculis, vestibulum dolor a, auctor ex. Pellentesque vitae nulla massa. Cras metus ex, laoreet sed molestie in, egestas ut sem. Curabitur tempus magna ligula, a volutpat enim laoreet id. Praesent tincidunt ultricies lectus, in scelerisque libero sollicitudin eget. Morbi sit amet sollicitudin sapien. Ut velit augue, convallis ac condimentum lobortis, ullamcorper sed massa. Vestibulum quis ligula mauris. Suspendisse id cursus nisi. Sed dignissim nisl iaculis lectus finibus, et mattis urna consequat. Phasellus sed lacus neque. In at arcu arcu. Integer at ornare lectus, non ornare urna. Nam sodales arcu a mi vulputate viverra.
+Firstly, there has been a slight shift in direction of the project. The over-all objective is to give a qualitative evaluation on using Mininet to evaluate various QoS parameters for a Node.js server, given metrics used by other papers that explore QoS in emulated networks.
 
-### Event 3 - 2112-04-11
+Further research has been done in the realm of Quality of Service testing, specifically what metrics were used for the testing. The team referenced several different papers in 
+order to ultimately decide which metrics to use. https://link.springer.com/chapter/10.1007%2F978-981-16-5120-5_2 The principle paper that was reviewed. From this the metrics 
+considered included Throughput, Delay, Packet Loss and Jitter. Though it was noticed that RTT was not considered in the paper. Further, the https://link.springer.com/article/10.1007
+/s11042-021-11467-x paper enforces throughput as a necessary metric, and that response time (or RTT) must be considered. https://ieeexplore.ieee.org/document/9251144/authors#authors 
+also reinforces the use of delays tests and jitter as QoS measurements.   
+
+The final metrics that have been decided on are 
+    -Throughput (total transmitted data in bits)/(total time taken in seconds)
+    -Delay (time required to transmit the data from sender to receiver)
+    -Packet loss (the number of packets not delivered to their destination)
+    -Jitter (the variance in latency)'
+	-RTT (Round-Trip Time)
+
+Our next tasks will include finalizing the emulation code that will be used for testing. Some further research may take place. The purpose for the research is to compare proper 
+implementation of an emulation of a network and testing it using a framework. It is the hope that by increasing our knowledge of similar emulations it will inform our approach in our 
+project.    
+
+### Update Coming Soon - (TBD)
 
 Duis vitae urna ut felis luctus gravida. Sed aliquam, nisl vel aliquet euismod, erat magna bibendum justo, ac tincidunt elit purus ut sapien. Donec euismod odio magna, quis hendrerit dui hendrerit eget. Proin dapibus mi vel ligula lacinia, a euismod tellus tincidunt. Suspendisse vitae volutpat ligula. Duis placerat vestibulum mi auctor varius. Nullam eget bibendum purus, sed consectetur augue. Pellentesque ut ex vel lorem vestibulum maximus. Maecenas bibendum libero augue, tempor feugiat tellus tristique sit amet.
 
