@@ -39,7 +39,7 @@ also reinforces the use of delays tests and jitter as QoS measurements.
 
 The final metrics that have been decided on are: 
 
--Throughput (total transmitted data in bits)/(total time taken in seconds)
+- Throughput (total transmitted data in bits)/(total time taken in seconds)
 - Delay (time required to transmit the data from sender to receiver)
 - Packet loss (the number of packets not delivered to their destination)
 - Jitter (the variance in latency)
