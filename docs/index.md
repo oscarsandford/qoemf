@@ -65,7 +65,7 @@ Oscar Sandford
 - Created a sample Node.js application to test with
 
 Ben Wunderlich
-- Wrote the project updates and updated the porject website
+- Wrote the project updates and updated the project website
 - Contributed to research for related works in the project
 - Revised experiment environment with Mininet VM
 
