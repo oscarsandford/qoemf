@@ -38,15 +38,35 @@ considered included Throughput, Delay, Packet Loss and Jitter. Though it was not
 also reinforces the use of delays tests and jitter as QoS measurements.   
 
 The final metrics that have been decided on are 
-    -Throughput (total transmitted data in bits)/(total time taken in seconds)
-    -Delay (time required to transmit the data from sender to receiver)
-    -Packet loss (the number of packets not delivered to their destination)
-    -Jitter (the variance in latency)'
-	-RTT (Round-Trip Time)
+    \item Throughput (total transmitted data in bits)/(total time taken in seconds)
+    \item Delay (time required to transmit the data from sender to receiver)
+    \item Packet loss (the number of packets not delivered to their destination)
+    \item Jitter (the variance in latency)'
+	\item RTT (Round-Trip Time)
 
 Our next tasks will include finalizing the emulation code that will be used for testing. Some further research may take place. The purpose for the research is to compare proper 
 implementation of an emulation of a network and testing it using a framework. It is the hope that by increasing our knowledge of similar emulations it will inform our approach in our 
-project.    
+project. 
+
+Indidual Contributions:
+
+Juan Flores
+- Wrote the project updates and updated the project website
+- Contributed to research for related works in the project
+- Revised project report updates 
+
+Oscar Sandford
+- Set up project structure on GitHub: report template in LaTeX, project website
+- Written and editorial contributions to project proposal document
+- Researched and responded to related works in the report
+- Set up experiment environment with Mininet VM, recorded setup replication instructions
+- Created driver code for Node.js server-clients topology using the Mininet Python API
+- Created a sample Node.js application to test with
+
+Ben Wunderlich
+- Wrote the project updates and updated the porject website
+- Contributed to research for related works in the project
+- Revised experiment environment with Mininet VM
 
 ### Update Coming Soon - (TBD)
 
