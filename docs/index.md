@@ -29,7 +29,8 @@ There are a few tasks that we are currently working on. One major task we are un
 
 ### First Bi-weekly Project Update (3/7/2022)
 
-Firstly, there has been a slight shift in direction of the project. The over-all objective is to give a qualitative evaluation on using Mininet to evaluate various QoS parameters for a Node.js server, given metrics used by other papers that explore QoS in emulated networks.
+Firstly, there has been a slight shift in direction of the project. The over-all objective is to give a qualitative evaluation on using Mininet to evaluate various QoS parameters for
+a Node.js server, given metrics used by other papers that explore QoS in emulated networks.
 
 Further research has been done in the realm of Quality of Service testing, specifically what metrics were used for the testing. The team referenced several different papers in 
 order to ultimately decide which metrics to use. https://link.springer.com/chapter/10.1007%2F978-981-16-5120-5_2 The principle paper that was reviewed. From this the metrics 
