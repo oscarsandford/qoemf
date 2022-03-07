@@ -37,12 +37,13 @@ considered included Throughput, Delay, Packet Loss and Jitter. Though it was not
 /s11042-021-11467-x paper enforces throughput as a necessary metric, and that response time (or RTT) must be considered. https://ieeexplore.ieee.org/document/9251144/authors#authors 
 also reinforces the use of delays tests and jitter as QoS measurements.   
 
-The final metrics that have been decided on are 
-    \item Throughput (total transmitted data in bits)/(total time taken in seconds)
-    \item Delay (time required to transmit the data from sender to receiver)
-    \item Packet loss (the number of packets not delivered to their destination)
-    \item Jitter (the variance in latency)'
-	\item RTT (Round-Trip Time)
+The final metrics that have been decided on are: 
+
+-Throughput (total transmitted data in bits)/(total time taken in seconds)
+- Delay (time required to transmit the data from sender to receiver)
+- Packet loss (the number of packets not delivered to their destination)
+- Jitter (the variance in latency)
+- RTT (Round-Trip Time)
 
 Our next tasks will include finalizing the emulation code that will be used for testing. Some further research may take place. The purpose for the research is to compare proper 
 implementation of an emulation of a network and testing it using a framework. It is the hope that by increasing our knowledge of similar emulations it will inform our approach in our 
