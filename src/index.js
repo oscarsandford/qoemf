@@ -4,11 +4,12 @@ const PORT = 8080;
 const IP = (process.argv.length===3) ? process.argv[2] : "127.0.0.1";
 
 app.listen(PORT, IP, () => {
-	console.log(` >> qoemf express server listening at ${IP}/${PORT}.`);
+	console.log(` >> qoemf express server listening at ${IP}:${PORT}.`);
 });
 
 app.get("*", (req,res) => {
-	res.write("<h1>qoemf server hello!!</h1>");
+	console.log(" >> Sending fruits..");
+	res.sendFile(__dirname + "/available-fruits-2.html");
 });
 
 
