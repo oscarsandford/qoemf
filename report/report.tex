@@ -11,7 +11,7 @@
 \def\L{{\cal L}}
 
 
-\title{On Using Mininet to Evaluate QoS for Node.js Back Ends}
+\title{A Survey on the Importance of QoS Metrics Across Networking Domains}
 \name{Juan Flores, Oscar Sandford, and Ben Wunderlich
 \thanks{Thank you to Dr. Jianping Pan at the University of Victoria for his teaching and guidance throughout this project and the course.}}
 \address{University of Victoria}
@@ -24,82 +24,117 @@ Write this last.
 \end{abstract}
 %
 \begin{keywords}
-Quality of Service, Software Defined Network, Network emulation, Mininet, Node.js
+Quality of service, survey
 \end{keywords}
 %
 % Overview of the problem. Why is it important?
 \section{Introduction}
-The design of computer networks is driven by a drive towards a target quality of service (QoS), a set of performance measurements. Further, the implementation of 
-network architectures demands time and money, and implementations that fail to meet quality of service standards waste time for both companies and customers. 
-Software-defined networks (SDN) addresses the project of static architectures by enabling programming and measurement in a dynamic setting. It is important to understand 
-and harness the strengths of SDN in a methodical way, so developers can focus more on the design goals and less on tedious implementation tasks. 
+The design of computer networks is compelled by a drive towards a target quality of experience (QoE) and quality of service (QoS). These measures define the success of 
+a network service in a competitive market. It is important to make a distinction between QoE and QoS. QoS is the set of characteristics in a computer networks system that 
+affect its ability to satisfy the utilitarian needs of its users \cite{qoe_qos_2014}. QoE focuses closer on the end-user, and includes user perception, expectation, and 
+their specific experiences using the service \cite{qoe_qos_2010}. To expound on that, \cite{qoe_qos_2014} states that QoS is viewed from a system's perspective, and QoE 
+from a user's perspective. This study will focus on quality of service, as it is easier to evaluate due to its quantitative nature. QoS requirements stem from domain and 
+system requirements, rather than the requirements of an user-end, which are difficult to measure. In the interest of isolating the analysis of a network to its technical 
+requirements and how well companies correctly prioritize the maintenance of their system in order to best fit a generalized view of the customers' needs, we will only 
+consider quality of service (QoS) in this study.
 
-There does not yet exist a qualitative evaluation of such measurement techniques for modern web servers such as Node.js. Providing a survey of various QoS measurement 
-metrics for this domain will enable web developers to better understand and optimize the QoS metrics that matter most to their application domain.
+Countless studies in computer networking have addressed quality of service when it comes to the development and analysis of new algorithms, measurements on the efficacy of 
+existing solutions, as well as domain-specific requirements for specific systems. However, various domains are differing standards on quality of service for their 
+applications. It is difficult to correctly understand what it means for an application to have a "good" quality of service, especially under the requirements of the 
+application domain itself, without giving weights, or prioritization, to certain parameters. 
+
+This paper surveys a set of well-defined, domain-agnostic quality of service parameters and defines each parameter's importance in the context of different networking 
+domains. Such domains include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications. 
+
+% The design of computer networks is driven by a drive towards a target quality of service (QoS), a set of performance measurements. Further, the implementation of 
+% network architectures demands time and money, and implementations that fail to meet quality of service standards waste time for both companies and customers. 
+% Software-defined networks (SDN) addresses the project of static architectures by enabling programming and measurement in a dynamic setting. It is important to understand 
+% and harness the strengths of SDN in a methodical way, so developers can focus more on the design goals and less on tedious implementation tasks. 
+
+% There does not yet exist a qualitative evaluation of such measurement techniques for modern web servers such as Node.js. Providing a survey of various QoS measurement 
+% metrics for this domain will enable web developers to better understand and optimize the QoS metrics that matter most to their application domain.
 
 % What has already been done? Why are their efforts not sufficient?
 \section{Related Work}
-Previous studies have defined quality of services measurements \cite{qos_analysis_2022} and used network emulation tools to program their own experiments 
-\cite{chauhan_atulkar_2020}. The metrics presented in \cite{qos_analysis_2022} are throughput, delay, packet loss, and jitter. The authors used these metrics in a 
-generic setting (i.e. no specific domain) in order to compare TCP and UDP protocols. While this domain-agnostic approach makes for a good start, there are several 
-flaws in their results. Firstly, no packet loss was experienced, and therefore the measurement was ignored. Secondly, previous studies used round trip time (RTT) 
-as a QoS metric, which \cite{qos_analysis_2022} did not consider. 
+Software-defined networks (SDN) address the problem of static architectures by enabling programming and measurement in a dynamic setting. In order to help developers 
+focus more on the design goals and less on tedious implementation tasks, SDN research has inspired the utilization of network emulators \cite{mininet_emulation_2014}. 
+Network emulators are often used to test the quality of service of server architectures in a pseudo-live setting. Experiments with such emulators reveal key quality of 
+service parameters that have been used in domain-agostic settings. 
 
-Another study that investigated load balancing algorithms looked at throughput, response time, and memory utilization \cite{babbar_2022}. Measuring memory utilization 
-is effective for load balancing, but we are considering quality of service, with the focus on the end user. The weight on the server only matters if it affects the 
-client. This paper enforces throughput as a necessary metric, and that response time (or RTT) must be considered. 
-
-Regencia and Yu's paper develops a completely configurable QoS testing framework \cite{regencia_2021}. Their framework allows for topology, switch, load, host, and 
-other such configuration, but this configurablility add unnecessary overhead to our specific problem. 
-
-A different paper \cite{AweQoS_2020} proposes a framework titled AweQoS which combines both Quality of Service tests with security tests.    
-The framework includes bandwitdth speed measurement, delay tests and jitter tests for the QoS and SYN flood test, UDP flood test and Slow HTTP flood test. 
-This paper shows promise in being able to combine different tests in-order to accurately measure the performance of a network. Despite this, the only in-depth outcome 
-was a comperative band-witdh test between iPerf and the proposed AweQos bandwidth test using UDP. It furthers the idea that QoS type frameworks may have potnetial but 
-have not been thouroughly tested enough.
-
-% What is our approach? Why can it do better or differently?
-\section{Approach}
-Mininet is utilized as a network emulator, for it has seen significant use in related works \cite{mininet_emulation_2014,qos_analysis_2022,chauhan_atulkar_2020} and 
-is well-documented. The Iperf tool was used in \cite{chauhan_atulkar_2020} for generating network traffic, and its use is considered for the same purposes in this 
-study. We reused the quality of service metrics outlined in \cite{qos_analysis_2022}: 
+Network emulation using Mininet in order to test quality of service parameters for TCP and UDP has been used in \cite{qos_analysis_2022, chauhan_atulkar_2020}. The 
+metrics presented in \cite{qos_analysis_2022} include throughput, delay, packet loss, and jitter. The metrics are further defined as follows: 
 \begin{itemize}
     \item Throughput (total transmitted data in bits)/(total time taken in seconds)
     \item Delay (time required to transmit the data from sender to receiver)
     \item Packet loss (the number of packets not delivered to their destination)
     \item Jitter (the variance in latency)
-\end{itemize} 
+\end{itemize}
+The authors used these metrics in a generic setting (i.e. no specific domain) in order to compare TCP and UDP protocols. While this domain-agnostic approach makes for 
+a good start, there are several flaws in their results. Firstly, no packet loss was experienced, and that measurement was thereby ignored. Secondly, previous studies 
+\cite{shamim2018performance, chauhan2020achieving, althobyani2018implementing} used round trip time (RTT) as a QoS metric, which \cite{qos_analysis_2022} did not consider. 
 
-Mininet's toolkit is used to create a server around a simple Node.js application, and artificially adjust flow control, packet drop rate, and jitter from the server-side. 
-Mininet measures packet return trip time (RTT), delay, and throughput from the server to clients. The individual results of these measurements determine how the overall 
-quality of service changes as various server-side features are tweaked dynamically. Additionally, we show how to use Mininet to simulate DoS attacks by a large number 
-of clients in order to observe how attacks affect quality of service to benign users.
+Another study that investigated load balancing algorithms looked at throughput, response time, and memory utilization \cite{babbar_2022}. Measuring memory utilization 
+is effective for load balancing, but we are considering quality of service, with the focus on the end user. The weight on the server only matters if it affects the 
+client. This paper reinforces throughput as a necessary metric, and that response time (or RTT) must be considered. 
 
-The qualitative effects of the QoS metrics we used are analyzed to see which metrics are best for the domain of this problem. As a result of this study, we provide a 
-quality of service measurement outline for future developers to consider when testing their Node.js applications in a pseudo-live setting using Mininet. 
+A different paper \cite{AweQoS_2020} proposes a framework titled AweQoS which combines both quality of service tests with security and reliability tests. The framework 
+includes bandwidth speed measurement, delay tests and jitter tests, as well as SYN flood test, UDP flood test, and Slow HTTP flood test. 
 
-Our project is extensible and configurable. All network simulation is done on Mininet's pre-built Ubuntu virtual machine image \cite{mininet_github_2021}, and our 
-source code for running Mininet in Python with a Node.js server is provided at the end of the work. 
+In order to provide foundation for quality of service analysis in differing domains, \cite{taxonomy} created a taxonomy for clustering specification into categories. 
+We will reuse their specification in our approach, as well as extend it in relation to the domains we will be looking at. 
 
-% Expected deliverables and a rough biweekly time schedule.
-\subsection{Timeline}
-\begin{enumerate}
-    \item Jan 31st - Feb 13th: Create project outline, gather resources, outline program and create git repository.
-    \item Feb 14th - Feb 27th: Build testing environment and prepare test.
-    \item Feb 28th - Mar 13th: Begin tests, create midterm presentation and present. 
-    \item Mar 14th - Mar 27th: Gather results and prepare final presentation. Begin final report.
-    \item Mar 28th - Apr 7th: Final Presentation. Continue to work on final report.
-    \item Apr 8th - Apr 16th: Turn in final report.
-\end{enumerate}
+
+% What is our approach? Why can it do better or differently?
+\section{Approach}
+As we conclude our investigation on common quality of service metrics used in simulated and domain-agnostic settings, we compiled a set of general quality of service 
+metrics as well as policies, according to specifications outlined in \cite{taxonomy}. The following hierarchy of parameters is based on \cite{taxonomy}, with additional 
+notes pertaining to parameters discovered in related works discussed prior.
+
+At this point, we make the distinction between metrics and parameters, where the former is a subset of the latter.
+
+\begin{itemize}
+    \item Metrics
+    \begin{itemize}
+        \item Security
+        \item Performance
+        \begin{itemize}
+            \item Timeliness (e.g. delay)
+            \item Precision (consistency, e.g. jitter)
+            \item Accuracy (lack of errors, e.g. packet loss)
+            \item Combinations (e.g. throughput)
+        \end{itemize}
+        \item Relative Importance (cost of given service to user)
+    \end{itemize}
+    \item Policies
+    \begin{itemize}
+        \item Management
+        \item Levels of Service (lower QoS to maintain availability)
+    \end{itemize}
+\end{itemize}
+
+Note the inclusion of security as a general metric. While many applications simply prioritize speed and reliability, security is key to some application domains. 
+Reliability issues (system faults not as a result of a malicious attacker) are covered by the performance category. 
+
 
 \subsection{Project Website}
 Please see the associated website for progress reports and results at https://oscarsandford.github.io/qoemf/.
 
-% Some plots and stuff here about what we did.
-\section{Experiments}
-Text here.
+\section{Domains}
 
-% Discussion about the results.
+% RTS, FPS, MOBA, MMORPG, turn-based
+\subsection{Online Multiplayer Games}
+
+% Napster, Gnutella, BitTorrent
+\subsection{P2P File Transfer}
+
+% Twitch.tv, YouTube, Netflix, ..?
+\subsection{Video Streaming}
+
+% Discord, Skype, ..
+\subsection{VoIP}
+
+
+% Discussion, comparison, reflection on life...
 \section{Discussion}
 Text here.
 

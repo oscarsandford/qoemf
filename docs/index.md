@@ -5,13 +5,7 @@ title: "qoemf"
 
 # Project Proposal
 
-We propose designing and demonstrating a framework for measuring QoS (quality of service) for clients connecting to a server over a virtual 
-network using [mininet](http://mininet.org/). Alterations on the server-side (e.g. flow control policy, packet drop rates) will be used to simulate 
-load or unstable connection. On the client-side, we can recreate DoS and other attacks on the server in a controlled and natural way in order to 
-see how the server responds. Our primary objective will be to understand how these various factors influence the quality of experience for clients 
-connecting to the network. 
-
-More details forthcoming.
+This project surveys a set of well-defined, domain-agnostic quality of service parameters and defines each parameter's importance in the context of different networking domains. Such domains include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications. 
 
 
 * * *
@@ -27,7 +21,7 @@ As  of now, most of the  effort has gone to research. Each member has taken time
 
 There are a few tasks that we are currently working on. One major task we are undertaking is researching and deciding on the metrics we’ll be using to run our tests. We are comparing metrics used in different papers to observe what can give us an accurate result. Another major task is working on the technical side of the project. Simply getting the code up and running for QoS tests that we’ll measure with our metrics.
 
-### First Bi-weekly Project Update (3/7/2022)
+### Second Bi-weekly Project Update (3/7/2022)
 
 Firstly, there has been a slight shift in direction of the project. The over-all objective is to give a qualitative evaluation on using Mininet to evaluate various QoS parameters for
 a Node.js server, given metrics used by other papers that explore QoS in emulated networks.
@@ -74,10 +68,6 @@ Ben Wunderlich
 
 Duis vitae urna ut felis luctus gravida. Sed aliquam, nisl vel aliquet euismod, erat magna bibendum justo, ac tincidunt elit purus ut sapien. Donec euismod odio magna, quis hendrerit dui hendrerit eget. Proin dapibus mi vel ligula lacinia, a euismod tellus tincidunt. Suspendisse vitae volutpat ligula. Duis placerat vestibulum mi auctor varius. Nullam eget bibendum purus, sed consectetur augue. Pellentesque ut ex vel lorem vestibulum maximus. Maecenas bibendum libero augue, tempor feugiat tellus tristique sit amet.
 
-
-# Midterm Presentation
-
-Embed a video here?
 
 # Final Presentation
 
