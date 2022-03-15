@@ -5,7 +5,44 @@ title: "qoemf"
 
 # Project Proposal
 
-This project surveys a set of well-defined, domain-agnostic quality of service parameters and defines each parameter's importance in the context of different networking domains. Such domains include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications. 
+This project surveys a set of well-defined, domain-agnostic quality of service parameters and defines each parameter's importance in the context of different networking domains. Such 
+domains include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications. 
+
+Note: 
+This paper has had a redirection in purpose and approach since the original intention.  Due to the difficulty of designing and implementing the target topology with Nodejs/Nginx in 
+Mininet, indecision on protocol levels to measure, and time restrictions, our original plan to load test a QoS measurement framework became unfeasible. We also found that our 
+requirements for the framework were becoming narrower and narrower, and that results would not be very meaningful. 
+After further research, a new objective was decided by the team. Below you will find our new proposed project with adjusted objectives and time-frame. Please note that despite our 
+new direction, we are still working within the QoS field, focusing now on qualitative analysis and evaluation, instead of emulation and measurement. As such, the research we 
+completed before is still applicable to the new proposal. We have added to our related works list, and have not removed any of the sources we originally listed. More sources will be 
+added to the citation list.  
+
+New Objective:
+To survey a set of well-defined, domain-agnostic quality of service parameters and define each parameter's importance in the context of different networking domains. Such domains 
+include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications.
+Overview
+This study will focus on quality of service, as it is easier to evaluate due to its quantitative nature. QoS requirements stem from domain and system requirements, rather than only 
+the requirements of an user-end, which can be difficult to measure. In the interest of isolating the analysis of a network to its technical requirements and how well organizations 
+correctly prioritize the maintenance of their system in order to best fit a generalized view of the customers' needs, we will only consider quality of service (QoS) in this study.  
+
+Related Works:
+Countless studies in computer networking have addressed quality of service when it comes to the development and analysis of new algorithms, measurements on the efficacy of existing 
+solutions, as well as domain-specific requirements for specific systems. 
+However, various domains have differing standards on quality of service for their applications. It is difficult to correctly understand what it means for an application to have a 
+"good" quality of service, especially under the requirements of the application domain itself, without giving weights, or prioritization, to certain parameters. 
+We aim to provide an evaluation of each general QoS parameter (as outlined by [11]) based on analysis of domain requirements for each domain. This work is necessary because QoS has 
+been analyzed in certain domains, but there does not yet seem to be a survey on how common QoS measurement parameters are prioritized in each domain. As a result of this survey, 
+readers will come to understand the most meaningful QoS measurements for each domain.
+
+Timeline:
+Passed:
+Jan 31st - Feb 13th: Create project outline, gather resources, outline program and create git repository. 
+Feb 14th - Feb 27th: Build testing environment and further research on related papers.
+Feb 28th - Mar 13th: Redirection of project. Gathered more sources and updated our project paper. 
+Upcoming:
+Mar 14th - Mar 27th: Third Bi-weekly update. Gather new research materials, analyze papers and their target domain(s), evaluate QoS parameters outline in related work with respect to their use/priority in target domain 
+Mar 28th - Apr 4th: Final Presentation on findings and preliminary evaluations Continue to work on the final report.
+Apr 5th - Apr 11th: Finalize report and turn it in
 
 
 * * *
