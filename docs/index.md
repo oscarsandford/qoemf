@@ -49,7 +49,7 @@ Apr 5th - Apr 11th: Finalize report and turn it in
 
 # Log Book
 
-Over time, we will document our progress on the project here.
+THe progression of our project is documented here. We started with an initial idea to do simulation and QoS measurement in Mininet, and then evolved our idea into the new proposal (as seen above).
 
 
 ### First Bi-weekly Project Update (2/21/2022)
@@ -101,7 +101,11 @@ Ben Wunderlich
 - Contributed to research for related works in the project
 - Revised experiment environment with Mininet VM
 
-### Update Coming Soon - (TBD)
+### Revised Project Proposal Posted (3/13/2022)
+
+See the proposal at the top of the page.
+
+### Third Bi-weekly Project Update (3/??/2022)
 
 Duis vitae urna ut felis luctus gravida. Sed aliquam, nisl vel aliquet euismod, erat magna bibendum justo, ac tincidunt elit purus ut sapien. Donec euismod odio magna, quis hendrerit dui hendrerit eget. Proin dapibus mi vel ligula lacinia, a euismod tellus tincidunt. Suspendisse vitae volutpat ligula. Duis placerat vestibulum mi auctor varius. Nullam eget bibendum purus, sed consectetur augue. Pellentesque ut ex vel lorem vestibulum maximus. Maecenas bibendum libero augue, tempor feugiat tellus tristique sit amet.
 
