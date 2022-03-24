@@ -105,9 +105,77 @@ Ben Wunderlich
 
 See the proposal at the top of the page.
 
-### Third Bi-weekly Project Update (3/??/2022)
+### Third Bi-weekly Project Update (3/23/2022)
 
-Duis vitae urna ut felis luctus gravida. Sed aliquam, nisl vel aliquet euismod, erat magna bibendum justo, ac tincidunt elit purus ut sapien. Donec euismod odio magna, quis hendrerit dui hendrerit eget. Proin dapibus mi vel ligula lacinia, a euismod tellus tincidunt. Suspendisse vitae volutpat ligula. Duis placerat vestibulum mi auctor varius. Nullam eget bibendum purus, sed consectetur augue. Pellentesque ut ex vel lorem vestibulum maximus. Maecenas bibendum libero augue, tempor feugiat tellus tristique sit amet.
+Project Update:
+Since the last project update, we have changed the objective and purpose of the project. We have a new project proposal that can be reviewed at the beginning of the project 
+website. Below you can find the new project objective, overview, the work we have completed for the new objective and the next steps to finalize the project. 
+
+New Objective: 
+To survey a set of well-defined, domain-agnostic quality of service parameters and define each parameter's importance in the context of different networking domains. Such 
+domains include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications. Our objective includes analyzing 20-25 
+different papers and additional sources for insight. 
+
+Overview: 
+This study will focus on quality of service, as it is easier to evaluate due to its quantitative nature. QoS requirements stem from domain and system requirements, rather 
+than only the requirements of an user-end, which can be difficult to measure. In the interest of isolating the analysis of a network to its technical requirements and how 
+well organizations correctly prioritize the maintenance of their system in order to best fit a generalized view of the customers' needs, we will only consider quality of 
+service (QoS) in this study.
+
+Work Completed:
+We composed the taxonomy of quality of service parameters including quantitative security, performance and importance metrics; and non-measurable policies that influence in 
+the metrics. 
+We derived this hierarchy based on the specifications found in [1] with additional notes:
+
+Metrics cover the following attributes:
+Security (robustness against malicious action)
+Confidentiality (information is received by intended party)
+Integrity (information remains accurate)
+Performance
+Timeliness (e.g. delay)
+Precision (i.e. consistency, e.g. jitter)
+Accuracy (i.e. lack of errors, e.g. packet loss)
+Combinations (i.e. of the above, e.g. throughput: precision over time)
+Relative Importance (i.e. cost of given service to user)
+
+Policies involve the following:
+Levels of Service (i.e. commitment to a task, e.g. guaranteed or best-effort)
+Availability
+Management (i.e. accept lower quality of service instead of no service at all)
+
+
+The metrics cover the quantifiable aspects of a system’s components. The policies dictate the behavior of these components. The domains that we are reviewing currently 
+include online multiplayer gaming, peer-to-peer file transfer services, video streaming, and financial applications. We are currently halfway through analyzing papers that 
+propose solutions to pressing QoS problems, revealing the importance of certain QoS parameters in these domains.  
+We aggregated and cross-validated the quality of service measurements used in related works, such as domain-agnostic network simulations, with the taxonomy above. 
+
+
+Next steps: 
+Create domain requirement diagrams that compare the importance of each parameter with respect to the domain requirements.
+Capture other sources for additional insight (such as company engineering blogs).
+
+Individual Contributions:
+Juan Flores
+Wrote the project updates and updated the project website
+Performed analysis on papers from the compiled library
+Revised project report updates
+Responded to comments, feedback and questions on discussion board
+Oscar Sandford
+Outlined networking domains of interest
+Researched and analyzed different papers for analysis
+Written and editorial contributions to project proposal document
+Responded to comments, feedback and questions on discussion board
+Revised updates and new project proposal
+Composed introduction, related work, and approach sections
+Ben Wunderlich
+Researched and analyzed different papers for analysis
+Revised updates and new project proposal
+
+
+
+[1] B. Sabata, S. Chatterjee, M. Davis, J.J. Sydir, and T.F. Lawrence, “Taxonomy for qos specifications,” in Proceedings Third International Workshop on ObjectOriented 
+Real-Time Dependable Systems, 1997, pp. 100–107.
+
 
 
 # Final Presentation
