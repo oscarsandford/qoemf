@@ -166,7 +166,7 @@ Real-Time Dependable Systems, 1997, pp. 100–107.
 
 # Final Presentation
 
-<iframe src="https://drive.google.com/file/d/1AxZUVzWk-ZuPe1CXitZ_XOE1LmRy0fPg/view?usp=sharing" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1AxZUVzWk-ZuPe1CXitZ_XOE1LmRy0fPg/preview?usp=sharing" width="640" height="480"></iframe>
 
 
 
