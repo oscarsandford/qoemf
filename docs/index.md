@@ -172,4 +172,4 @@ Real-Time Dependable Systems, 1997, pp. 100–107.
 
 # Report 
 
-<iframe src="csc466_report.pdf" width="100%" height="500px"></iframe>
+<iframe src="csc466_report.pdf" width="100%" height="800px"></iframe>
